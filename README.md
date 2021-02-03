@@ -20,7 +20,8 @@ We leave it to you to further interpret this data in the way you want. Please wr
 
 The goal of the assignment is to get an idea of your experience, creativity, and ability to learn, analyse and reason. 
 
-`Please keep in mind that this assignment is the starting point of discussion, not the destination. Readability and clearly explaining your solution and reason about it are more important than implementing many different concepts, libraries, or tools without explaining why one would use them in the case. We expect you to don't spend more than 4 hours to complete this assignment. Please think carefully before you start about what you are able to accomplish in this timeframe.`
+Please keep in mind that this assignment is the starting point of discussion, not the destination. Readability and clearly explaining your solution and reason about it are more important than implementing many different concepts, libraries, or tools without explaining why one would use them in the case. 
+`We expect you to not spend more than 4 hours on this assignment. This will likely not be enough. Please think carefully before you start, about what you are able to accomplish in this timeframe.`
 
 Your back-end application does not have to be production ready but it should be able build and run without errors
 
