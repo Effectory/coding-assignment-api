@@ -22,12 +22,8 @@ The goal of the assignment is to get an idea of your experience, creativity, and
 
 `Please keep in mind that this assignment is the starting point of discussion, not the destination. Readability and clearly explaining your solution and reason about it are more important than implementing many different concepts, libraries, or tools without explaining why one would use them in the case. We expect you to don't spend more than 4 hours to complete this assignment. Please think carefully before you start about what you are able to accomplish in this timeframe.`
 
-Your back-end application does not have to be production ready but it should be able build and run  without errors
+Your back-end application does not have to be production ready but it should be able build and run without errors
 
-Depending on your degree of experience, we may want to add some creative ideas to your application. This is entirely up to you, and you can choose anything you want to enrich your application. Some examples include:
-- Deploy and run the API to a cloud environment.
-- Set up a Docker compose file to run and/or deploy your application
-- Using event-based messaging to publish the answers of the questionnaire
 
 ## Tech stack
 For the application(s), you can use any language or framework of your choosing. However in order for us to better understand your fit with our current tech stack, we recommend you stay close to it. Our stack is made of Angular/Typescript, .Net Core/C#, Azure.
