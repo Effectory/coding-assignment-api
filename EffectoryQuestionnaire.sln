@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{15216D77-BBDC-4334-86A4-51DF504FCFF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E9EB59A6-81FB-4C7B-8340-0590DE63585B}"
+	ProjectSection(SolutionItems) = preProject
+		DECISIONS.md = DECISIONS.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{8302C590-06D2-45F7-84E9-1818DA678C62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Effectory.Services.Questionnaire", "src\Effectory.Services.Questionnaire\Effectory.Services.Questionnaire.csproj", "{A67E4847-15FD-49F9-B466-3E53066CD099}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Effectory.Questionnaire.Tests", "tests\Effectory.Questionnaire.Tests\Effectory.Questionnaire.Tests.csproj", "{F2D449AC-3F67-4C14-92F4-A00355743868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{06B65ADC-1E1E-4630-AB71-9CD82E396DAF}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A67E4847-15FD-49F9-B466-3E53066CD099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67E4847-15FD-49F9-B466-3E53066CD099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67E4847-15FD-49F9-B466-3E53066CD099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67E4847-15FD-49F9-B466-3E53066CD099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D449AC-3F67-4C14-92F4-A00355743868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D449AC-3F67-4C14-92F4-A00355743868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D449AC-3F67-4C14-92F4-A00355743868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D449AC-3F67-4C14-92F4-A00355743868}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A67E4847-15FD-49F9-B466-3E53066CD099} = {15216D77-BBDC-4334-86A4-51DF504FCFF7}
+		{F2D449AC-3F67-4C14-92F4-A00355743868} = {8302C590-06D2-45F7-84E9-1818DA678C62}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {226C0B6B-431A-4F68-9B8D-AE8CF24810C7}
+	EndGlobalSection
+EndGlobal
