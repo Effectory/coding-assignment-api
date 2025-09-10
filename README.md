@@ -1,32 +1,112 @@
-# Api Coding Assignment
+# Employee Feedback Survey API - Coding Assignment
 
-## Case: Questionnaire Api
+## Business Context
 
-For this coding assignment, we want you to create an _http based API_.
-The API should support:
-- Getting one or more questions and answer options, preferably paged 
-- Posting one or more answers for the questions. This includes a mock userid and one of four possible departments (marketing, sales, development, reception)
-- Returning a results calculation of min, max, average for each answer, calculated across the departments
+You're building an API for an employee feedback survey system (with a couple of endpoints for reporting & management purposes). 
+Employees from different departments participate in anonymous surveys to provide feedback about their work experience and organizational culture.
 
-We also want you to create a test-suite for the API to check its correctness. For this you can use any approach or tool you like.
+## Business Requirements
 
-## The JSON
+### Survey Participation
+- **Participants**: Employees belong to one of four departments: `Marketing`, `Sales`, `Development`, or `Reception`
+- **Fair Participation**: Each employee can only submit their responses once per survey to ensure data integrity
+- **Authentication**: The system should identify participants (via mock user ID) while maintaining response anonymity
 
-As data source for the API you should use the JSON provided called `questionnaire.json`. This JSON contains a datastructure that represents your sample questionnaire. It contains `subjects`, `questions` and `answers`.
+### Survey Management
+- **Question Delivery**: The API should serve survey questions with their available answer options
+- **Response Collection**: Employees submit their answers through the API
+- **Survey Lifecycle**: Surveys have an open/closed state
 
-We leave it to you to further interpret this data in the way you want. Please write down what questions you had about the data and what assumptions you made.
+### Reporting & Analytics
+- **Anonymous Reporting**: Results must be completely anonymous - no way to trace responses back to individuals
+- **Department-Level Insights**: Calculate statistics (min, max, average) per department for each question
+- **Data Protection**: Results are only calculated when the survey closes to prevent partial data from compromising anonymity
 
-## Expectations
+## Technical Requirements
 
-The goal of the assignment is to get an idea of your experience, creativity, and ability to learn, analyse and reason. 
+Your API should support:
 
-Please keep in mind that this assignment is the starting point of discussion, not the destination. Readability and clearly explaining your solution and reason about it are more important than implementing many different concepts, libraries, or tools without explaining why one would use them in the case. 
-`We expect you to not spend more than 4 hours on this assignment. This will likely not be enough. Please think carefully before you start, about what you are able to accomplish in this timeframe.`
+1. **Question Retrieval**
+   - Get survey questions and answer options
+   - Support pagination for better performance
+   - Handle multilingual content (Dutch/English)
 
-Your back-end application does not have to be production ready but it should be able build and run without errors
+2. **Response Submission**
+   - Accept employee responses with participant identification
+   - Validate department assignments
+   - Enforce one-response-per-participant rule
+   - Handle both Likert scale and open-text responses
 
+3. **Results Calculation**
+   - Calculate min, max, and average scores per department
+   - Only allow calculations when survey is closed
+   - Ensure sufficient response volume for anonymity
 
-## Tech stack
-For the application(s), you can use any language or framework of your choosing. However in order for us to better understand your fit with our current tech stack, we recommend you stay close to it. Our stack is made of Angular/Typescript, .Net Core/C#, Azure.
+4. **Survey State Management**
+   - Track survey open/closed status
+   - Prevent responses when survey is closed
+   - Enable results calculation only after closure
 
-You can read more about what else our Tech Stack contains [here](https://tech.effectory.com/#what-are-we-working-on).
+In the above, think about the frontend that would be consuming your API, you don't need to build it.
+
+## Data Structure
+
+Use the provided `questionnaire.json` as the data. 
+
+## Technical Expectations
+
+- Create a test suite covering business rules and discovered edge cases
+- Implement proper error handling and validation
+- Consider data persistence (in-memory is acceptable for this assignment)
+- Document your API endpoints (Swagger/OpenAPI)
+- Include clear setup and run instructions
+
+## Time Investment
+
+**Please limit yourself to 4 hours maximum.** 
+
+Focus on:
+1. Core business logic implementation
+2. Essential API endpoints
+3. Key business rule enforcement
+4. Basic test coverage
+
+## Questions to Consider
+
+When implementing, consider these aspects and document your assumptions:
+- How will you ensure response anonymity while preventing duplicate submissions?
+- What constitutes "sufficient data" for anonymous reporting?
+- How should the system handle incomplete responses?
+- What validation rules apply to different question types?
+- How will you structure the data model for efficient querying?
+
+## Tech Stack Recommendation
+
+While you're free to choose any technology, we recommend staying close to our current stack for better evaluation:
+- **Backend**: >= .NET8/ C#
+- **Cloud**: Azure services
+- **Testing**: xUnit, NSubstitute
+
+Learn more about our complete tech stack at [tech.effectory.com](https://tech.effectory.com/#what-are-we-working-on).
+
+## Deliverables
+
+1. Working API that builds and runs without errors
+2. Test suite demonstrating correctness
+3. Brief documentation explaining:
+   - Your interpretation of the requirements
+   - Key assumptions made
+   - Design decisions and trade-offs
+   - What you would implement next given more time
+
+## Evaluation Criteria
+
+We'll assess:
+- **Business Logic**: How well you've translated requirements into code
+- **Code Quality**: Readability, structure, and best practices
+- **Problem Solving**: Your approach to handling the constraints and requirements
+- **Communication**: How clearly you explain your solution and reasoning
+
+Remember: This assignment is a conversation starter, not a final product. 
+
+Focus on demonstrating your thought process and technical approach rather than building a production-ready system.
